@@ -9,14 +9,14 @@ let activeSlideIndex = 0
 
 sidebar.style.top = `-${(slidesCount - 1) * 100}vh`
 
-upBtn.addEventListener('click', () => changeSlider('down'))
-downBtn.addEventListener('click', () => changeSlider('up'))
+upBtn.addEventListener('click', () => changeSlider('up'))
+downBtn.addEventListener('click', () => changeSlider('down'))
 
 document.addEventListener('keydown', event => {
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-        changeSlider('down')
-    } else if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
         changeSlider('up')
+    } else if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+        changeSlider('down')
     }
 })
 
